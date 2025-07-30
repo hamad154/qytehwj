@@ -2,6 +2,8 @@
 window.TOOL_LIST = [
   { name: 'Text Case Converter', url: 'tools/text-case-converter.html' },
   { name: 'CSV to JSON', url: 'tools/csv-to-json.html' },
+  { name: 'Extra Space Remover', url: 'space-remover.html' },
+  { name: 'Text Cleaner', url: 'textcleaner.html' },
   { name: 'Image Compressor', url: 'tools/image-compressor.html' },
   { name: 'Password Generator', url: 'tools/password-generator.html' },
   { name: 'QR Code Generator', url: 'tools/qr-code-generator.html' },
