@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="description" content="Free online tools for PDF, images, text, and more – all in one place with MyToolza.">
+<meta name="keywords" content="PDF tools, image converter, zip extractor, QR generator, free online tools">
+<meta name="robots" content="index, follow">
+<meta name="author" content="MyToolza">
+
+  <meta charset="UTF-8">
+  <title>MyToolza | Online PDF Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="92x92" href="favicon-92.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+
+  <style>
+    :root {
+      --red: #e63946;
+      --light-bg: #f3f3f3;
+      --text-dark: #111;
+      --white: #fff;
+      --footer-bg: #1e1e1e;
+      --footer-link: #ccc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+    body { background: var(--light-bg); color: var(--text-dark); }
+
+   header {
+  background: var(--white);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.site-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--red);
+  flex-shrink: 0;
+}
+.site-name a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.main-nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-search {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  width: 200px;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--red);
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-group {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-nav,
+  .header-search {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+    @media (max-width: 768px) {
+      .header-left {
+        display: none;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu-icon {
+        display: none;
+      }
+    }
+
+       .tools {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+    .tool-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.2s;
+      width: 240px;
+}
+
+    .floating-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      width: 280px;
+      background: var(--white);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      z-index: 9999;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .floating-menu input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .floating-menu ul {
+      list-style: none;
+    }
+
+    .floating-menu ul li {
+      margin: 10px 0;
+    }
+
+    .floating-menu ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+.floating-menu ul li a:hover {
+  color: var(--red);
+}
+
+
+    .mobile-search {
+  display: none;
+  background: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 60px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  z-index: 998;
+  border-radius: 6px;
+}
+.mobile-search input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-link);
+      padding: 50px 20px;
+    }
+
+    .footer-columns {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-columns h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .footer-columns ul {
+      list-style: none;
+    }
+
+    .footer-columns ul li {
+      margin: 8px 0;
+    }
+
+    .footer-columns ul li a {
+      color: var(--footer-link);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85rem;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+footer {
+  padding-bottom: 10px;
+}
+
+#searchResults {
+  position: absolute;
+  top: 45px;
+  left: 1060px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+#searchResults a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+#searchResults a:hover {
+  background-color: #f0f0f0;
+}
+
+ // Any new design
+
+  </style>
+
+<!-- Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-560YBXFEEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-560YBXFEEN');
+</script>
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="your_verification_code" />
+</head>
+<body>
+
+
+  <header>
+  <div class="site-name">
+  <a href="index.html">MyToolza</a>
+</div>
+  <div class="nav-group">
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="all-tools.html">All Tools</a>
+    </nav>
+<div class="header-search-wrapper">
+  <input id="headerSearch" class="header-search" type="text" placeholder="Search tools..." oninput="searchTools(this.value)" />
+  <div id="searchResults"></div>
+</div>
+</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div class="floating-menu" id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="all-tools.html">All Tools</a></li>
+      <li>
+  <input
+    id="mobileSearchInput"
+    type="text"
+    placeholder="Type to search..."
+    oninput="filterToolsMobile()"
+    style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px;"
+  />
+  <div id="mobileSearchResults"></div>
+</li>
+    </ul>
+  </div>
+</header>
+
+
+<main style="padding-top: 80px;">
+  <div class="tool-section" style="max-width: 1000px; margin: 0 auto 50px auto; padding: 50px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.08);">
+    <h1 style="color: #e63946; text-align: center; font-size: 2rem; margin-bottom: 10px;">Unicode Text Converter</h1>
+    <p style="text-align: center; font-size: 1rem; color: #333; margin-bottom: 30px;">
+      Convert your normal text into fancy Unicode styles.
+    </p>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+      <label for="inputText" style="font-weight: bold; font-size: 16px;">Enter Text:</label>
+      <span style="font-weight: bold; font-size: 16px;">Unlimited</span>
+    </div>
+
+    <textarea id="inputText" placeholder="Paste your text here..." style="width: 100%; height: 200px; padding: 10px; background: #eee; border: 1px solid #ccc; border-radius: 6px; font-size: 16px;"></textarea>
+
+    <div style="display: flex; align-items: center; gap: 10px; margin: 20px 0; position: relative;">
+      <div id="selectedStyle" style="min-width: 140px; text-align: center; padding: 8px 12px; background: #f5f5f5; border: 1px solid #ccc; border-radius: 20px; font-weight: bold;">🆄🅽🅸🅲🅾🅳🅴</div>
+      <div style="position: relative;">
+        <button onclick="toggleDropdown()" style="padding: 10px 16px; border-radius: 20px; background: #e63946; color: white; border: none; cursor: pointer;">Choose Style</button>
+        <ul id="styleList" style="position: absolute; top: 45px; left: 0; width: 240px; background: white; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); max-height: 300px; overflow-y: auto; display: none; z-index: 1000;">
+          <li onclick="setStyle('emoji')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🆄🅽🅸🅲🅾🅳🅴 (Emoji)</li>
+          <li onclick="setStyle('cursive')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝓤𝓷𝓲𝓬𝓸𝓭𝓮 (Cursive)</li>
+                           <li onclick="setStyle('boldfraktur')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝕭𝖔𝖑𝖉 𝕱𝖗𝖆𝖐𝖙𝖚𝖗 (Bold Fraktur)</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <button onclick="convertText()" style="background: #e63946; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">Convert</button>
+
+    <label for="outputText" style="font-weight: bold; display: block; margin: 30px 0 8px;">Converted Output:</label>
+    <textarea id="outputText" readonly style="width: 100%; height: 200px; padding: 10px; background: #eee; border: 1px solid #ccc; border-radius: 6px; font-size: 16px;"></textarea>
+
+    <div style="margin-top: 15px; display: flex; gap: 10px;">
+      <button onclick="copyText()" style="background: #e63946; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">Copy</button>
+      <button onclick="downloadText()" style="background: #e63946; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">Download</button>
+    </div>
+  </div>
+</main>
+
+<script>
+  let currentStyle = 'emoji';
+
+  const styles = {
+    emoji: {
+      name: "🆄🅽🅸🅲🅾🅳🅴",
+      map: {
+        a: "🅰", b: "🅱", c: "🅲", d: "🅳", e: "🅴", f: "🅵", g: "🅶", h: "🅷",
+        i: "🅸", j: "🅹", k: "🅺", l: "🅻", m: "🅼", n: "🅽", o: "🅾", p: "🅿",
+        q: "🆀", r: "🆁", s: "🆂", t: "🆃", u: "🆄", v: "🆅", w: "🆆", x: "🆇",
+        y: "🆈", z: "🆉"
+      }
+    },
+    cursive: {
+      name: "𝓤𝓷𝓲𝓬𝓸𝓭𝓮",
+      base: { a: 0x1D4B6, A: 0x1D4AE }
+    }
+boldfraktur: {
+  name: "𝕭𝖔𝖑𝖉 𝕱𝖗𝖆𝖐𝖙𝖚𝖗",
+  base: { a: 0x1D56C, A: 0x1D504 }
+}
+
+  };
+
+  function toggleDropdown() {
+    const dropdown = document.getElementById("styleList");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  function setStyle(styleKey) {
+    currentStyle = styleKey;
+    document.getElementById("selectedStyle").textContent = styles[styleKey].name;
+    document.getElementById("styleList").style.display = "none";
+  }
+
+  document.addEventListener("click", function (e) {
+    const list = document.getElementById("styleList");
+    if (!e.target.closest("#styleList") && !e.target.closest("button")) {
+      list.style.display = "none";
+    }
+  });
+
+  function convertText() {
+    const input = document.getElementById("inputText").value;
+    let output = "";
+
+    if (currentStyle === 'emoji') {
+      for (let char of input) {
+        const lower = char.toLowerCase();
+        output += styles.emoji.map[lower] || char;
+      }
+    } else if (currentStyle === 'cursive') {
+      for (let char of input) {
+        if (/[a-z]/.test(char)) {
+          output += String.fromCodePoint(styles.cursive.base.a + (char.charCodeAt(0) - 97));
+        } else if (/[A-Z]/.test(char)) {
+          output += String.fromCodePoint(styles.cursive.base.A + (char.charCodeAt(0) - 65));
+        } else {
+          output += char;
+        }
+      }
+    }
+} else if (currentStyle === 'boldfraktur') {
+  for (let char of input) {
+    if (/[a-z]/.test(char)) {
+      output += String.fromCodePoint(styles.boldfraktur.base.a + (char.charCodeAt(0) - 97));
+    } else if (/[A-Z]/.test(char)) {
+      output += String.fromCodePoint(styles.boldfraktur.base.A + (char.charCodeAt(0) - 65));
+    } else {
+      output += char;
+    }
+  }
+}
+
+    document.getElementById("outputText").value = output;
+  }
+
+  function copyText() {
+    const text = document.getElementById("outputText");
+    text.select();
+    document.execCommand("copy");
+  }
+
+  function downloadText() {
+    const text = document.getElementById("outputText").value;
+    const blob = new Blob([text], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "converted-text.txt";
+    link.click();
+  }
+</script>
+
+<footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Features</a></li>
+          <li><a href="all-tools.html">Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="mobileapp.html">Mobile App</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="extentions.html">Extensions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 MyToolza – All rights reserved
+    </div>
+  </footer>
+<script src="tools.js"></script>
+ <script>
+  const toolsList = window.TOOL_LIST;
+
+  const headerSearchInput = document.getElementById('headerSearch');
+  const headerSearchResults = document.getElementById('searchResults');
+  const mobileSearchInput = document.getElementById('mobileSearchInput');
+  const mobileSearchResults = document.getElementById('mobileSearchResults');
+
+  function showSearchResults(inputValue, container) {
+    const query = inputValue.trim().toLowerCase();
+    container.innerHTML = '';
+
+    if (query.length < 1) return;
+
+    const results = toolsList.filter(tool => tool.name.toLowerCase().includes(query));
+
+    if (results.length === 0) {
+      const noResult = document.createElement('div');
+      noResult.textContent = 'No tools found';
+      noResult.style.padding = '10px';
+      container.appendChild(noResult);
+      return;
+    }
+
+    results.forEach(tool => {
+      const link = document.createElement('a');
+      link.href = tool.url;
+      link.textContent = tool.name;
+      link.style.display = 'block';
+      link.style.padding = '10px';
+      link.style.textDecoration = 'none';
+      link.style.color = '#000';
+      link.style.borderBottom = '1px solid #eee';
+      link.onmouseover = () => link.style.background = '#f0f0f0';
+      link.onmouseout = () => link.style.background = 'transparent';
+      container.appendChild(link);
+    });
+  }
+
+  headerSearchInput.addEventListener('input', () => {
+    showSearchResults(headerSearchInput.value, headerSearchResults);
+  });
+
+  mobileSearchInput.addEventListener('input', () => {
+    showSearchResults(mobileSearchInput.value, mobileSearchResults);
+  });
+
+  // Hide results when clicking outside
+  document.addEventListener('click', (e) => {
+  // Header search hide
+  if (!headerSearchInput.contains(e.target) && !headerSearchResults.contains(e.target)) {
+    headerSearchResults.innerHTML = '';
+  }
+
+  // Mobile search results hide
+  if (!mobileSearchInput.contains(e.target) && !mobileSearchResults.contains(e.target)) {
+    mobileSearchResults.innerHTML = '';
+  }
+
+  // Floating menu hide on outside click — ONLY on mobile
+  const menu = document.getElementById('menu');
+  const menuIcon = document.querySelector('.menu-icon');
+
+  if (window.innerWidth <= 768) {
+    if (
+      !menu.contains(e.target) &&
+      !menuIcon.contains(e.target)
+    ) {
+      menu.style.display = 'none';
+    }
+  }
+});
+
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function showMobileSearch() {
+    document.getElementById('mobileSearchBox').style.display = 'block';
+    document.getElementById('menu').style.display = 'none';
+  }
+ // Any new code
+
+</script>
+<script src="tool-script.js"></script>
+
+
+</body>
+</html>

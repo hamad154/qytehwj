@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="description" content="Free online tools for PDF, images, text, and more – all in one place with MyToolza.">
+<meta name="keywords" content="PDF tools, image converter, zip extractor, QR generator, free online tools">
+<meta name="robots" content="index, follow">
+<meta name="author" content="MyToolza">
+
+  <meta charset="UTF-8">
+  <title>MyToolza | Online PDF Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="92x92" href="favicon-92.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+
+  <style>
+    :root {
+      --red: #e63946;
+      --light-bg: #f3f3f3;
+      --text-dark: #111;
+      --white: #fff;
+      --footer-bg: #1e1e1e;
+      --footer-link: #ccc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+    body { background: var(--light-bg); color: var(--text-dark); }
+
+   header {
+  background: var(--white);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.site-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--red);
+  flex-shrink: 0;
+}
+.site-name a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.main-nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-search {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  width: 200px;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--red);
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-group {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-nav,
+  .header-search {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+    @media (max-width: 768px) {
+      .header-left {
+        display: none;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu-icon {
+        display: none;
+      }
+    }
+
+       .tools {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+    .tool-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.2s;
+      width: 240px;
+}
+
+    .floating-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      width: 280px;
+      background: var(--white);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      z-index: 9999;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .floating-menu input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .floating-menu ul {
+      list-style: none;
+    }
+
+    .floating-menu ul li {
+      margin: 10px 0;
+    }
+
+    .floating-menu ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+.floating-menu ul li a:hover {
+  color: var(--red);
+}
+
+
+    .mobile-search {
+  display: none;
+  background: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 60px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  z-index: 998;
+  border-radius: 6px;
+}
+.mobile-search input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-link);
+      padding: 50px 20px;
+    }
+
+    .footer-columns {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-columns h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .footer-columns ul {
+      list-style: none;
+    }
+
+    .footer-columns ul li {
+      margin: 8px 0;
+    }
+
+    .footer-columns ul li a {
+      color: var(--footer-link);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85rem;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+footer {
+  padding-bottom: 10px;
+}
+
+#searchResults {
+  position: absolute;
+  top: 45px;
+  left: 1060px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+#searchResults a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+#searchResults a:hover {
+  background-color: #f0f0f0;
+}
+
+ // Any new design
+
+  </style>
+
+<!-- Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-560YBXFEEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-560YBXFEEN');
+</script>
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="your_verification_code" />
+</head>
+<body>
+
+
+  <header>
+  <div class="site-name">
+  <a href="index.html">MyToolza</a>
+</div>
+  <div class="nav-group">
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="all-tools.html">All Tools</a>
+    </nav>
+<div class="header-search-wrapper">
+  <input id="headerSearch" class="header-search" type="text" placeholder="Search tools..." oninput="searchTools(this.value)" />
+  <div id="searchResults"></div>
+</div>
+</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div class="floating-menu" id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="all-tools.html">All Tools</a></li>
+      <li>
+  <input
+    id="mobileSearchInput"
+    type="text"
+    placeholder="Type to search..."
+    oninput="filterToolsMobile()"
+    style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px;"
+  />
+  <div id="mobileSearchResults"></div>
+</li>
+    </ul>
+  </div>
+</header>
+
+
+<main style="padding-top: 80px;">
+  <div class="tool-section" style="max-width: 1000px; margin: 0 auto 50px auto; padding: 50px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.08);">
+    <h1 style="color: #e63946; text-align: center; font-size: 2rem; margin-bottom: 10px;">Unicode Text Generator</h1>
+    <p style="text-align: center; font-size: 1rem; color: #333; margin-bottom: 30px;">
+      Convert plain text into 𝒇𝒂𝒏𝒄𝒚, 𝕔𝕠𝕠𝕝, and 🎉emoji-style Unicode fonts.
+    </p>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+      <label for="inputText" style="font-weight: bold; font-size: 16px;">Enter Text:</label>
+      <span style="font-weight: bold; font-size: 16px;">Unlimited</span>
+    </div>
+
+    <textarea id="inputText" placeholder="Paste your text here..." style="width: 100%; height: 200px; padding: 10px; background: #eee; border: 1px solid #ccc; border-radius: 6px; font-size: 16px;"></textarea>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
+      <div style="position: relative;">
+        <button onclick="toggleDropdown()" style="background: #e63946; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">
+          Select Style ▼
+        </button>
+        <div id="dropdown" style="display: none; position: absolute; top: 45px; left: 0; z-index: 999; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-height: 300px; overflow-y: auto; width: 240px;">
+          <ul style="list-style: none; margin: 0; padding: 0;">
+            <!-- Replace below with full 60 options -->
+            <li onclick="setStyle('𝒰𝓃𝒾𝒸ℴ𝒹ℯ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝒰𝓃𝒾𝒸ℴ𝒹ℯ</li>
+<li onclick="setStyle('𝓤𝓷𝓲𝓬𝓸𝓭𝓮')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝓤𝓷𝓲𝓬𝓸𝓭𝓮</li>
+<li onclick="setStyle('𝕬𝖊𝖘𝖙𝖍𝖊𝖙𝖎𝖈')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝕬𝖊𝖘𝖙𝖍𝖊𝖙𝖎𝖈</li>
+<li onclick="setStyle('𝔘𝔫𝔦𝔠𝔬𝔡𝔢')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝔘𝔫𝔦𝔠𝔬𝔡𝔢</li>
+<li onclick="setStyle('𝕄𝕠𝕟𝕠𝕤𝕡𝕒𝕔𝕖')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝕄𝕠𝕟𝕠𝕤𝕡𝕒𝕔𝕖</li>
+<li onclick="setStyle('𝖀𝖓𝖎𝖈𝖔𝖉𝖊')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝖀𝖓𝖎𝖈𝖔𝖉𝖊</li>
+<li onclick="setStyle('Ｕｎｉｃｏｄｅ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">Ｕｎｉｃｏｄｅ</li>
+<li onclick="setStyle('🄳🄾🅃🅃🄴🄳')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🄳🄾🅃🅃🄴🄳</li>
+<li onclick="setStyle('🅄🄿🄿🄴🅁')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🅄🄿🄿🄴🅁</li>
+<li onclick="setStyle('🅤🅝🅘🅒🅞🅓🅔')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🅤🅝🅘🅒🅞🅓🅔</li>
+<li onclick="setStyle('Ⓤⓝⓘⓒⓞⓓⓔ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">Ⓤⓝⓘⓒⓞⓓⓔ</li>
+<li onclick="setStyle('🇺🇳🇮🇨🇴🇩🇪')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🇺🇳🇮🇨🇴🇩🇪</li>
+<li onclick="setStyle('🅆🄸🄳🄴')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🅆🄸🄳🄴</li>
+<li onclick="setStyle('『ＢＯＬＤ』')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">『ＢＯＬＤ』</li>
+<li onclick="setStyle('𝓢𝓽𝔂𝓵𝓲𝓼𝓱')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝓢𝓽𝔂𝓵𝓲𝓼𝓱</li>
+<li onclick="setStyle('ᙡᥲᥙᖇᥲ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">ᙡᥲᥙᖇᥲ</li>
+<li onclick="setStyle('꧁༒☬𝕰𝖒𝖕𝖎𝖗𝖊☬༒꧂')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">꧁༒☬𝕰𝖒𝖕𝖎𝖗𝖊☬༒꧂</li>
+<li onclick="setStyle('🅑🅤🅑🅑🅛🅔')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🅑🅤🅑🅑🅛🅔</li>
+<li onclick="setStyle('ꜱᴍᴀʟʟ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">ꜱᴍᴀʟʟ</li>
+<li onclick="setStyle('𝑈𝑛𝑖𝑐𝑜𝑑𝑒')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝑈𝑛𝑖𝑐𝑜𝑑𝑒</li>
+<li onclick="setStyle('𝘜𝘯𝘪𝘤𝘰𝘥𝘦')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝘜𝘯𝘪𝘤𝘰𝘥𝘦</li>
+<li onclick="setStyle('𝗨𝗻𝗶𝗰𝗼𝗱𝗲')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝗨𝗻𝗶𝗰𝗼𝗱𝗲</li>
+<li onclick="setStyle('𝘿𝙊𝙏')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝘿𝙊𝙏</li>
+<li onclick="setStyle('🄰🅂🄲🄸🄸')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🄰🅂🄲🄸🄸</li>
+<li onclick="setStyle('🧿𝔈𝔪𝔬𝔧𝔦')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🧿𝔈𝔪𝔬𝔧𝔦</li>
+<li onclick="setStyle('𝓑𝓸𝓽𝓽𝓮𝓭')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝓑𝓸𝓽𝓽𝓮𝓭</li>
+<li onclick="setStyle('『𝕲𝕺𝕿𝕳𝕀ℂ』')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">『𝕲𝕺𝕿𝕳𝕀ℂ』</li>
+<li onclick="setStyle('[̲̅U]')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">[̲̅U]</li>
+<li onclick="setStyle('𝒞𝓊𝓇𝓈𝒾𝓋𝑒')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝒞𝓊𝓇𝓈𝒾𝓋𝑒</li>
+<li onclick="setStyle('𝓒𝓱𝓪𝓵𝓴𝓫𝓸𝓪𝓻𝓭')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝓒𝓱𝓪𝓵𝓴𝓫𝓸𝓪𝓻𝓭</li>
+<li onclick="setStyle('U͎n͎i͎c͎o͎d͎e͎')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">U͎n͎i͎c͎o͎d͎e͎</li>
+//{<li onclick="setStyle('🅃🄴🄻🄴🄶🅁🄰🄼')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🅃🄴🄻🄴🄶🅁🄰🄼</li>
+<li onclick="setStyle('Ⓑⓤⓑⓑⓛⓔⓢ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">Ⓑⓤⓑⓑⓛⓔⓢ</li>
+<li onclick="setStyle('💠𝐀𝐞𝐬𝐭𝐡𝐞𝐭𝐢𝐜 💠')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">💠𝐀𝐞𝐬𝐭𝐡𝐞𝐭𝐢𝐜 💠</li>
+<li onclick="setStyle('ℂ𝕠𝕞𝕚𝕔')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">ℂ𝕠𝕞𝕚𝕔</li>
+<li onclick="setStyle('₣₳₦₵Ɏ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">₣₳₦₵Ɏ</li>
+<li onclick="setStyle('卂乇丂ㄒ卄乇ㄒ丨匚')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">卂乇丂ㄒ卄乇ㄒ丨匚</li>
+<li onclick="setStyle('𝙼𝚘𝚗𝚘')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝙼𝚘𝚗𝚘</li>
+<li onclick="setStyle('🅐🅡🅣🅘🅢🅣🅘🅒')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🅐🅡🅣🅘🅢🅣🅘🅒</li>
+<li onclick="setStyle('𝗘𝗹𝗶𝘁𝗲')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝗘𝗹𝗶𝘁𝗲</li>
+<li onclick="setStyle('⋆🌟✨G͓̽l͓̽i͓̽t͓̽c͓̽h͓̽✨🌟⋆')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">⋆🌟✨G͓̽l͓̽i͓̽t͓̽c͓̽h͓̽✨🌟⋆</li>
+<li onclick="setStyle('ⓔⓝⓒⓞⓓⓔⓓ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">ⓔⓝⓒⓞⓓⓔⓓ</li>
+<li onclick="setStyle('𝓛𝓸𝓿𝓮')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝓛𝓸𝓿𝓮</li>
+<li onclick="setStyle('🄵🄰🄽🄲🅈')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🄵🄰🄽🄲🅈</li>
+<li onclick="setStyle('🄸🅁🄾🄽🄲🄻🄰🄳')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🄸🅁🄾🄽🄲🄻🄰🄳</li>
+<li onclick="setStyle('🌈𝒜𝓊𝓇ℴ𝓇𝒶 🌈')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🌈𝒜𝓊𝓇ℴ𝓇𝒶 🌈</li>
+<li onclick="setStyle('ᴛɪɴʏ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">ᴛɪɴʏ</li>
+<li onclick="setStyle('🔮𝕸𝖆𝖌𝖎𝖈')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🔮𝕸𝖆𝖌𝖎𝖈</li>
+<li onclick="setStyle('【𝐁𝐨𝐱𝐞𝐝】')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">【𝐁𝐨𝐱𝐞𝐝】</li>
+<li onclick="setStyle('M̷e̷s̷s̷y̷')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">M̷e̷s̷s̷y̷</li>
+<li onclick="setStyle('🄱🄻🄾🄲🄺🅈')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🄱🄻🄾🄲🄺🅈</li>
+<li onclick="setStyle('🅦🅔🅘🅡🅓')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🅦🅔🅘🅡🅓</li>
+<li onclick="setStyle('🄷🅈🄱🄱🅁🄸🄳')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🄷🅈🄱🄱🅁🄸🄳</li>
+<li onclick="setStyle('ᴀᴇsᴛʜᴇᴛɪᴄ')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">ᴀᴇsᴛʜᴇᴛɪᴄ</li>
+<li onclick="setStyle('𝔻𝕖𝕔𝕠𝕣𝕒𝕥𝕖𝕕')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝔻𝕖𝕔𝕠𝕣𝕒𝕥𝕖𝕕</li>
+<li onclick="setStyle('ℌ𝔬𝔩𝔦𝔡𝔞𝔶')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">ℌ𝔬𝔩𝔦𝔡𝔞𝔶</li>
+<li onclick="setStyle('🆄🅽🅸🅲🅾🅳🅴')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🆄🅽🅸🅲🅾🅳🅴</li>
+<li onclick="setStyle('𝕊𝕙𝕒𝕕𝕠𝕨')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">𝕊𝕙𝕒𝕕𝕠𝕨</li>
+<li onclick="setStyle('🄿🄰🅁🅃🅈')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🄿🄰🅁🅃🅈</li>}
+<li onclick="setStyle('emoji')" style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">🧬 Emoji</li>
+          </ul>
+        </div>
+      </div>
+
+      <button onclick="convertText()" style="background: #e63946; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">Convert</button>
+    </div>
+
+    <label for="outputText" style="font-weight: bold; display: block; margin: 30px 0 8px;">Converted Output:</label>
+    <textarea id="outputText" readonly style="width: 100%; height: 200px; padding: 10px; background: #eee; border: 1px solid #ccc; border-radius: 6px; font-size: 16px;"></textarea>
+
+    <div style="margin-top: 15px; display: flex; gap: 10px;">
+      <button onclick="copyText()" style="background: #e63946; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">Copy</button>
+      <button onclick="downloadText()" style="background: #e63946; color: #fff; border: none; padding: 10px 16px; border-radius: 6px; cursor: pointer;">Download</button>
+    </div>
+
+    <div class="suggestion-box" style="margin-top: 40px; padding: 20px; background: #e0e0e0; border-radius: 8px; text-align: center;">
+      <p style="margin-bottom: 10px; font-weight: bold;">Try More Tools:</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <a href="#" style="background: #fff; padding: 8px 14px; border-radius: 6px; color: #000; text-decoration: none; border: 1px solid #ccc;">Text Case Converter</a>
+        <a href="#" style="background: #fff; padding: 8px 14px; border-radius: 6px; color: #000; text-decoration: none; border: 1px solid #ccc;">Stylish Bio Generator</a>
+        <a href="#" style="background: #fff; padding: 8px 14px; border-radius: 6px; color: #000; text-decoration: none; border: 1px solid #ccc;">Word Counter</a>
+        <a href="#" style="background: #fff; padding: 8px 14px; border-radius: 6px; color: #000; text-decoration: none; border: 1px solid #ccc;">Space Remover</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  let currentStyle = 'emoji';
+
+  const styles = {
+    𝒰𝓃𝒾𝒸ℴ𝒹ℯ: {
+  name: "𝒰𝓃𝒾𝒸ℴ𝒹ℯ",
+  map: {
+    a: "𝒶", b: "𝒷", c: "𝒸", d: "𝒹", e: "ℯ", f: "𝒻", g: "ℊ", h: "𝒽", i: "𝒾", j: "𝒿",
+    k: "𝓀", l: "𝓁", m: "𝓂", n: "𝓃", o: "ℴ", p: "𝓅", q: "𝓆", r: "𝓇", s: "𝓈", t: "𝓉",
+    u: "𝓊", v: "𝓋", w: "𝓌", x: "𝓍", y: "𝓎", z: "𝓏",
+
+    A: "𝒜", B: "ℬ", C: "𝒞", D: "𝒟", E: "ℰ", F: "ℱ", G: "𝒢", H: "ℋ", I: "ℐ", J: "𝒥",
+    K: "𝒦", L: "ℒ", M: "ℳ", N: "𝒩", O: "𝒪", P: "𝒫", Q: "𝒬", R: "ℛ", S: "𝒮", T: "𝒯",
+    U: "𝒰", V: "𝒱", W: "𝒲", X: "𝒳", Y: "𝒴", Z: "𝒵",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+ emoji: {
+  name: "🆄🅽🅸🅲🅾🅳🅴",
+  map: {
+    a: "🅰", b: "🅱", c: "🌜", d: "🌛", e: "🎗", f: "🎏", g: "🌀", h: "♓", i: "🎐",
+    j: "🎷", k: "🎋", l: "👢", m: "〽", n: "🎵", o: "⚽", p: "🅿", q: "🍳",
+    r: "🌱", s: "💲", t: "🌴", u: "⛎", v: "✅", w: "🔱", x: "❎", y: "🍸", z: "💤",
+    A: "🅰", B: "🅱", C: "🌜", D: "🌛", E: "🎗", F: "🎏", G: "🌀", H: "♓", I: "🎐",
+    J: "🎷", K: "🎋", L: "👢", M: "〽", N: "🎵", O: "⚽", P: "🅿", Q: "🍳",
+    R: "🌱", S: "💲", T: "🌴", U: "⛎", V: "✅", W: "🔱", X: "❎", Y: "🍸", Z: "💤",
+    "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣",
+    "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣"
+  }
+},
+𝓤𝓷𝓲𝓬𝓸𝓭𝓮: {
+  name: "𝓤𝓷𝓲𝓬𝓸𝓭𝓮",
+  map: {
+    a: "𝓪", b: "𝓫", c: "𝓬", d: "𝓭", e: "𝓮", f: "𝓯", g: "𝓰", h: "𝓱", i: "𝓲", j: "𝓳",
+    k: "𝓴", l: "𝓵", m: "𝓶", n: "𝓷", o: "𝓸", p: "𝓹", q: "𝓺", r: "𝓻", s: "𝓼", t: "𝓽",
+    u: "𝓾", v: "𝓿", w: "𝔀", x: "𝔁", y: "𝔂", z: "𝔃",
+
+    A: "𝓐", B: "𝓑", C: "𝓒", D: "𝓓", E: "𝓔", F: "𝓕", G: "𝓖", H: "𝓗", I: "𝓘", J: "𝓙",
+    K: "𝓚", L: "𝓛", M: "𝓜", N: "𝓝", O: "𝓞", P: "𝓟", Q: "𝓠", R: "𝓡", S: "𝓢", T: "𝓣",
+    U: "𝓤", V: "𝓥", W: "𝓦", X: "𝓧", Y: "𝓨", Z: "𝓩",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+𝕬𝖊𝖘𝖙𝖍𝖊𝖙𝖎𝖈: {
+  name: "𝕬𝖊𝖘𝖙𝖍𝖊𝖙𝖎𝖈",
+  map: {
+    a: "𝖆", b: "𝖇", c: "𝖈", d: "𝖉", e: "𝖊", f: "𝖋", g: "𝖌", h: "𝖍", i: "𝖎", j: "𝖏",
+    k: "𝖐", l: "𝖑", m: "𝖒", n: "𝖓", o: "𝖔", p: "𝖕", q: "𝖖", r: "𝖗", s: "𝖘", t: "𝖙",
+    u: "𝖚", v: "𝖛", w: "𝖜", x: "𝖝", y: "𝖞", z: "𝖟",
+
+    A: "𝕬", B: "𝕭", C: "𝕮", D: "𝕯", E: "𝕰", F: "𝕱", G: "𝕲", H: "𝕳", I: "𝕴", J: "𝕵",
+    K: "𝕶", L: "𝕷", M: "𝕸", N: "𝕹", O: "𝕺", P: "𝕻", Q: "𝕼", R: "𝕽", S: "𝕾", T: "𝕿",
+    U: "𝖀", V: "𝖁", W: "𝖂", X: "𝖃", Y: "𝖄", Z: "𝖅",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+𝔘𝔫𝔦𝔠𝔬𝔡𝔢: {
+  name: "𝔘𝔫𝔦𝔠𝔬𝔡𝔢",
+  map: {
+    a: "𝔞", b: "𝔟", c: "𝔠", d: "𝔡", e: "𝔢", f: "𝔣", g: "𝔤", h: "𝔥", i: "𝔦", j: "𝔧",
+    k: "𝔨", l: "𝔩", m: "𝔪", n: "𝔫", o: "𝔬", p: "𝔭", q: "𝔮", r: "𝔯", s: "𝔰", t: "𝔱",
+    u: "𝔲", v: "𝔳", w: "𝔴", x: "𝔵", y: "𝔶", z: "𝔷",
+
+    A: "𝔄", B: "𝔅", C: "ℭ", D: "𝔇", E: "𝔈", F: "𝔉", G: "𝔊", H: "ℌ", I: "ℑ", J: "𝔍",
+    K: "𝔎", L: "𝔏", M: "𝔐", N: "𝔑", O: "𝔒", P: "𝔓", Q: "𝔔", R: "ℜ", S: "𝔖", T: "𝔗",
+    U: "𝔘", V: "𝔙", W: "𝔚", X: "𝔛", Y: "𝔜", Z: "ℨ",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'𝕄𝕠𝕟𝕠𝕤𝕡𝕒𝕔𝕖': {
+  name: "𝕄𝕠𝕟𝕠𝕤𝕡𝕒𝕔𝕖",
+  map: {
+    a: "𝕒", b: "𝕓", c: "𝕔", d: "𝕕", e: "𝕖", f: "𝕗", g: "𝕘", h: "𝕙", i: "𝕚", j: "𝕛",
+    k: "𝕜", l: "𝕝", m: "𝕞", n: "𝕟", o: "𝕠", p: "𝕡", q: "𝕢", r: "𝕣", s: "𝕤", t: "𝕥",
+    u: "𝕦", v: "𝕧", w: "𝕨", x: "𝕩", y: "𝕪", z: "𝕫",
+
+    A: "𝔸", B: "𝔹", C: "ℂ", D: "𝔻", E: "𝔼", F: "𝔽", G: "𝔾", H: "ℍ", I: "𝕀", J: "𝕁",
+    K: "𝕂", L: "𝕃", M: "𝕄", N: "ℕ", O: "𝕆", P: "ℙ", Q: "ℚ", R: "ℝ", S: "𝕊", T: "𝕋",
+    U: "𝕌", V: "𝕍", W: "𝕎", X: "𝕏", Y: "𝕐", Z: "ℤ",
+
+    0: "𝟘", 1: "𝟙", 2: "𝟚", 3: "𝟛", 4: "𝟜",
+    5: "𝟝", 6: "𝟞", 7: "𝟟", 8: "𝟠", 9: "𝟡"
+  }
+},
+'𝖀𝖓𝖎𝖈𝖔𝖉𝖊': {
+  name: "𝖀𝖓𝖎𝖈𝖔𝖉𝖊",
+  map: {
+    a: "𝖆", b: "𝖇", c: "𝖈", d: "𝖉", e: "𝖊", f: "𝖋", g: "𝖌", h: "𝖍", i: "𝖎", j: "𝖏",
+    k: "𝖐", l: "𝖑", m: "𝖒", n: "𝖓", o: "𝖔", p: "𝖕", q: "𝖖", r: "𝖗", s: "𝖘", t: "𝖙",
+    u: "𝖚", v: "𝖛", w: "𝖜", x: "𝖝", y: "𝖞", z: "𝖟",
+
+    A: "𝕬", B: "𝕭", C: "𝕮", D: "𝕯", E: "𝕰", F: "𝕱", G: "𝕲", H: "𝕳", I: "𝕴", J: "𝕵",
+    K: "𝕶", L: "𝕷", M: "𝕸", N: "𝕹", O: "𝕺", P: "𝕻", Q: "𝕼", R: "𝕽", S: "𝕾", T: "𝕿",
+    U: "𝖀", V: "𝖁", W: "𝖂", X: "𝖃", Y: "𝖄", Z: "𝖅",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'Ｕｎｉｃｏｄｅ': {
+  name: "Ｕｎｉｃｏｄｅ",
+  map: {
+    a: "ａ", b: "ｂ", c: "ｃ", d: "ｄ", e: "ｅ", f: "ｆ", g: "ｇ", h: "ｈ", i: "ｉ", j: "ｊ",
+    k: "ｋ", l: "ｌ", m: "ｍ", n: "ｎ", o: "ｏ", p: "ｐ", q: "ｑ", r: "ｒ", s: "ｓ", t: "ｔ",
+    u: "ｕ", v: "ｖ", w: "ｗ", x: "ｘ", y: "ｙ", z: "ｚ",
+
+    A: "Ａ", B: "Ｂ", C: "Ｃ", D: "Ｄ", E: "Ｅ", F: "Ｆ", G: "Ｇ", H: "Ｈ", I: "Ｉ", J: "Ｊ",
+    K: "Ｋ", L: "Ｌ", M: "Ｍ", N: "Ｎ", O: "Ｏ", P: "Ｐ", Q: "Ｑ", R: "Ｒ", S: "Ｓ", T: "Ｔ",
+    U: "Ｕ", V: "Ｖ", W: "Ｗ", X: "Ｘ", Y: "Ｙ", Z: "Ｚ",
+
+    0: "０", 1: "１", 2: "２", 3: "３", 4: "４",
+    5: "５", 6: "６", 7: "７", 8: "８", 9: "９"
+  }
+},
+'🄳🄾🅃🅃🄴🄳': {
+  name: "🄳🄾🅃🅃🄴🄳",
+  map: {
+    a: "🄰", b: "🄱", c: "🄲", d: "🄳", e: "🄴", f: "🄵", g: "🄶", h: "🄷", i: "🄸", j: "🄹",
+    k: "🄺", l: "🄻", m: "🄼", n: "🄽", o: "🄾", p: "🄿", q: "🅀", r: "🅁", s: "🅂", t: "🅃",
+    u: "🅄", v: "🅅", w: "🅆", x: "🅇", y: "🅈", z: "🅉",
+
+    A: "🄰", B: "🄱", C: "🄲", D: "🄳", E: "🄴", F: "🄵", G: "🄶", H: "🄷", I: "🄸", J: "🄹",
+    K: "🄺", L: "🄻", M: "🄼", N: "🄽", O: "🄾", P: "🄿", Q: "🅀", R: "🅁", S: "🅂", T: "🅃",
+    U: "🅄", V: "🅅", W: "🅆", X: "🅇", Y: "🅈", Z: "🅉",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'🅄🄿🄿🄴🅁': {
+  name: "🅄🄿🄿🄴🅁",
+  map: {
+    a: "🅐", b: "🅑", c: "🅒", d: "🅓", e: "🅔", f: "🅕", g: "🅖", h: "🅗", i: "🅘", j: "🅙",
+    k: "🅚", l: "🅛", m: "🅜", n: "🅝", o: "🅞", p: "🅟", q: "🅠", r: "🅡", s: "🅢", t: "🅣",
+    u: "🅤", v: "🅥", w: "🅦", x: "🅧", y: "🅨", z: "🅩",
+
+    A: "🅐", B: "🅑", C: "🅒", D: "🅓", E: "🅔", F: "🅕", G: "🅖", H: "🅗", I: "🅘", J: "🅙",
+    K: "🅚", L: "🅛", M: "🅜", N: "🅝", O: "🅞", P: "🅟", Q: "🅠", R: "🅡", S: "🅢", T: "🅣",
+    U: "🅤", V: "🅥", W: "🅦", X: "🅧", Y: "🅨", Z: "🅩",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'🅤🅝🅘🅒🅞🅓🅔': {
+  name: "🅤🅝🅘🅒🅞🅓🅔",
+  map: {
+    a: "🅐", b: "🅑", c: "🅒", d: "🅓", e: "🅔", f: "🅕", g: "🅖", h: "🅗", i: "🅘", j: "🅙",
+    k: "🅚", l: "🅛", m: "🅜", n: "🅝", o: "🅞", p: "🅟", q: "🅠", r: "🅡", s: "🅢", t: "🅣",
+    u: "🅤", v: "🅥", w: "🅦", x: "🅧", y: "🅨", z: "🅩",
+
+    A: "🅐", B: "🅑", C: "🅒", D: "🅓", E: "🅔", F: "🅕", G: "🅖", H: "🅗", I: "🅘", J: "🅙",
+    K: "🅚", L: "🅛", M: "🅜", N: "🅝", O: "🅞", P: "🅟", Q: "🅠", R: "🅡", S: "🅢", T: "🅣",
+    U: "🅤", V: "🅥", W: "🅦", X: "🅧", Y: "🅨", Z: "🅩",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'Ⓤⓝⓘⓒⓞⓓⓔ': {
+  name: "Ⓤⓝⓘⓒⓞⓓⓔ",
+  map: {
+    a: "ⓐ", b: "ⓑ", c: "ⓒ", d: "ⓓ", e: "ⓔ", f: "ⓕ", g: "ⓖ", h: "ⓗ", i: "ⓘ", j: "ⓙ",
+    k: "ⓚ", l: "ⓛ", m: "ⓜ", n: "ⓝ", o: "ⓞ", p: "ⓟ", q: "ⓠ", r: "ⓡ", s: "ⓢ", t: "ⓣ",
+    u: "ⓤ", v: "ⓥ", w: "ⓦ", x: "ⓧ", y: "ⓨ", z: "ⓩ",
+
+    A: "Ⓐ", B: "Ⓑ", C: "Ⓒ", D: "Ⓓ", E: "Ⓔ", F: "Ⓕ", G: "Ⓖ", H: "Ⓗ", I: "Ⓘ", J: "Ⓙ",
+    K: "Ⓚ", L: "Ⓛ", M: "Ⓜ", N: "Ⓝ", O: "Ⓞ", P: "Ⓟ", Q: "Ⓠ", R: "Ⓡ", S: "Ⓢ", T: "Ⓣ",
+    U: "Ⓤ", V: "Ⓥ", W: "Ⓦ", X: "Ⓧ", Y: "Ⓨ", Z: "Ⓩ",
+
+    0: "⓪", 1: "①", 2: "②", 3: "③", 4: "④",
+    5: "⑤", 6: "⑥", 7: "⑦", 8: "⑧", 9: "⑨"
+  }
+},
+'🇺🇳🇮🇨🇴🇩🇪': {
+  name: "🇺🇳🇮🇨🇴🇩🇪",
+  map: {
+    a: "🇦", b: "🇧", c: "🇨", d: "🇩", e: "🇪", f: "🇫", g: "🇬", h: "🇭", i: "🇮", j: "🇯",
+    k: "🇰", l: "🇱", m: "🇲", n: "🇳", o: "🇴", p: "🇵", q: "🇶", r: "🇷", s: "🇸", t: "🇹",
+    u: "🇺", v: "🇻", w: "🇼", x: "🇽", y: "🇾", z: "🇿",
+
+    A: "🇦", B: "🇧", C: "🇨", D: "🇩", E: "🇪", F: "🇫", G: "🇬", H: "🇭", I: "🇮", J: "🇯",
+    K: "🇰", L: "🇱", M: "🇲", N: "🇳", O: "🇴", P: "🇵", Q: "🇶", R: "🇷", S: "🇸", T: "🇹",
+    U: "🇺", V: "🇻", W: "🇼", X: "🇽", Y: "🇾", Z: "🇿",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'🅆🄸🄳🄴': {
+  name: "🅆🄸🄳🄴",
+  map: {
+    a: "🄰", b: "🄱", c: "🄲", d: "🄳", e: "🄴", f: "🄵", g: "🄶", h: "🄷", i: "🄸", j: "🄹",
+    k: "🄺", l: "🄻", m: "🄼", n: "🄽", o: "🄾", p: "🄿", q: "🅀", r: "🅁", s: "🅂", t: "🅃",
+    u: "🅄", v: "🅅", w: "🅆", x: "🅇", y: "🅈", z: "🅉",
+
+    A: "🄰", B: "🄱", C: "🄲", D: "🄳", E: "🄴", F: "🄵", G: "🄶", H: "🄷", I: "🄸", J: "🄹",
+    K: "🄺", L: "🄻", M: "🄼", N: "🄽", O: "🄾", P: "🄿", Q: "🅀", R: "🅁", S: "🅂", T: "🅃",
+    U: "🅄", V: "🅅", W: "🅆", X: "🅇", Y: "🅈", Z: "🅉",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'𝓢𝓽𝔂𝓵𝓲𝓼𝓱': {
+  name: "𝓢𝓽𝔂𝓵𝓲𝓼𝓱",
+  map: {
+    a: "𝓪", b: "𝓫", c: "𝓬", d: "𝓭", e: "𝓮", f: "𝓯", g: "𝓰", h: "𝓱", i: "𝓲", j: "𝓳",
+    k: "𝓴", l: "𝓵", m: "𝓶", n: "𝓷", o: "𝓸", p: "𝓹", q: "𝓺", r: "𝓻", s: "𝓼", t: "𝓽",
+    u: "𝓾", v: "𝓿", w: "𝔀", x: "𝔁", y: "𝔂", z: "𝔃",
+
+    A: "𝓐", B: "𝓑", C: "𝓒", D: "𝓓", E: "𝓔", F: "𝓕", G: "𝓖", H: "𝓗", I: "𝓘", J: "𝓙",
+    K: "𝓚", L: "𝓛", M: "𝓜", N: "𝓝", O: "𝓞", P: "𝓟", Q: "𝓠", R: "𝓡", S: "𝓢", T: "𝓣",
+    U: "𝓤", V: "𝓥", W: "𝓦", X: "𝓧", Y: "𝓨", Z: "𝓩",
+
+    0: "0", 1: "1", 2: "2", 3: "3", 4: "4",
+    5: "5", 6: "6", 7: "7", 8: "8", 9: "9"
+  }
+},
+'『ＢＯＬＤ』': {
+  name: "『ＢＯＬＤ』",
+  map: {
+    a: "ａ", b: "ｂ", c: "ｃ", d: "ｄ", e: "ｅ", f: "ｆ", g: "ｇ", h: "ｈ", i: "ｉ", j: "ｊ",
+    k: "ｋ", l: "ｌ", m: "ｍ", n: "ｎ", o: "ｏ", p: "ｐ", q: "ｑ", r: "ｒ", s: "ｓ", t: "ｔ",
+    u: "ｕ", v: "ｖ", w: "ｗ", x: "ｘ", y: "ｙ", z: "ｚ",
+
+    A: "Ａ", B: "Ｂ", C: "Ｃ", D: "Ｄ", E: "Ｅ", F: "Ｆ", G: "Ｇ", H: "Ｈ", I: "Ｉ", J: "Ｊ",
+    K: "Ｋ", L: "Ｌ", M: "Ｍ", N: "Ｎ", O: "Ｏ", P: "Ｐ", Q: "Ｑ", R: "Ｒ", S: "Ｓ", T: "Ｔ",
+    U: "Ｕ", V: "Ｖ", W: "Ｗ", X: "Ｘ", Y: "Ｙ", Z: "Ｚ",
+
+    0: "０", 1: "１", 2: "２", 3: "３", 4: "４",
+    5: "５", 6: "６", 7: "７", 8: "８", 9: "９"
+  },
+  before: "『",
+  after: "』"
+},
+'ᙡᥲᥙᖇᥲ'= {
+  name: "ᙡᥲᥙᖇᥲ",
+  before: "",
+  after: "",
+  map: {
+    A: "ᗩ", B: "ᗷ", C: "ᑕ", D: "ᗪ", E: "ᗴ", F: "ᖴ", G: "Ꮐ",
+    H: "ᕼ", I: "Ꭵ", J: "ᒍ", K: "ᛕ", L: "ᒪ", M: "ᗰ", N: "ᑎ",
+    O: "O", P: "ᑭ", Q: "Q", R: "ᖇ", S: "ᔕ", T: "T", U: "ᑌ",
+    V: "ᐯ", W: "ᗯ", X: "᙭", Y: "Y", Z: "ᘔ",
+    a: "ᥲ", b: "ᦓ", c: "ᥴ", d: "ᖱ", e: "ᥱ", f: "ᖴ", g: "ᧁ",
+    h: "Ꮒ", i: "ᥱ", j: "ʝ", k: "ƙ", l: "ᥣ", m: "ᥴ", n: "ᥒ",
+    o: "᥆", p: "ρ", q: "ϙ", r: "ᖇ", s: "ᥲ", t: "ƭ", u: "ᥙ",
+    v: "ꮩ", w: "᭙", x: "᥊", y: "᥎", z: "ʐ",
+    0: "𝟶", 1: "𝟷", 2: "𝟸", 3: "𝟹", 4: "𝟺", 5: "𝟻",
+    6: "𝟼", 7: "𝟽", 8: "𝟾", 9: "𝟿"
+  }
+},
+
+'꧁༒☬𝕰𝖒𝖕𝖎𝖗𝖊☬༒꧂'= {
+  name: "꧁༒☬𝕰𝖒𝖕𝖎𝖗𝖊☬༒꧂",
+  before: "꧁༒☬",
+  after: "☬༒꧂",
+  map: {
+    A: "𝕬", B: "𝕭", C: "𝕮", D: "𝕯", E: "𝕰", F: "𝕱", G: "𝕲",
+    H: "𝕳", I: "𝕴", J: "𝕵", K: "𝕶", L: "𝕷", M: "𝕸", N: "𝕹",
+    O: "𝕺", P: "𝕻", Q: "𝕼", R: "𝕽", S: "𝕾", T: "𝕿", U: "𝖀",
+    V: "𝖁", W: "𝖂", X: "𝖃", Y: "𝖄", Z: "𝖅",
+    a: "𝖆", b: "𝖇", c: "𝖈", d: "𝖉", e: "𝖊", f: "𝖋", g: "𝖌",
+    h: "𝖍", i: "𝖎", j: "𝖏", k: "𝖐", l: "𝖑", m: "𝖒", n: "𝖓",
+    o: "𝖔", p: "𝖕", q: "𝖖", r: "𝖗", s: "𝖘", t: "𝖙", u: "𝖚",
+    v: "𝖛", w: "𝖜", x: "𝖝", y: "𝖞", z: "𝖟",
+    0: "𝟘", 1: "𝟙", 2: "𝟚", 3: "𝟛", 4: "𝟜",
+    5: "𝟝", 6: "𝟞", 7: "𝟟", 8: "𝟠", 9: "𝟡"
+  }
+},
+
+'🅑🅤🅑🅑🅛🅔'= {
+  name: "🅑🅤🅑🅑🅛🅔",
+  before: "",
+  after: "",
+  map: {
+    A: "🅐", B: "🅑", C: "🅒", D: "🅓", E: "🅔", F: "🅕", G: "🅖",
+    H: "🅗", I: "🅘", J: "🅙", K: "🅚", L: "🅛", M: "🅜", N: "🅝",
+    O: "🅞", P: "🅟", Q: "🅠", R: "🅡", S: "🅢", T: "🅣", U: "🅤",
+    V: "🅥", W: "🅦", X: "🅧", Y: "🅨", Z: "🅩",
+    a: "🅐", b: "🅑", c: "🅒", d: "🅓", e: "🅔", f: "🅕", g: "🅖",
+    h: "🅗", i: "🅘", j: "🅙", k: "🅚", l: "🅛", m: "🅜", n: "🅝",
+    o: "🅞", p: "🅟", q: "🅠", r: "🅡", s: "🅢", t: "🅣", u: "🅤",
+    v: "🅥", w: "🅦", x: "🅧", y: "🅨", z: "🅩"
+  }
+},
+  'ꜱᴍᴀʟʟ': {
+    name: 'ꜱᴍᴀʟʟ',
+    map: {
+      A: 'ᴀ', B: 'ʙ', C: 'ᴄ', D: 'ᴅ', E: 'ᴇ', F: 'ꜰ', G: 'ɢ', H: 'ʜ', I: 'ɪ', J: 'ᴊ',
+      K: 'ᴋ', L: 'ʟ', M: 'ᴍ', N: 'ɴ', O: 'ᴏ', P: 'ᴘ', Q: 'ǫ', R: 'ʀ', S: 'ꜱ', T: 'ᴛ',
+      U: 'ᴜ', V: 'ᴠ', W: 'ᴡ', X: 'x', Y: 'ʏ', Z: 'ᴢ',
+      a: 'ᴀ', b: 'ʙ', c: 'ᴄ', d: 'ᴅ', e: 'ᴇ', f: 'ꜰ', g: 'ɢ', h: 'ʜ', i: 'ɪ', j: 'ᴊ',
+      k: 'ᴋ', l: 'ʟ', m: 'ᴍ', n: 'ɴ', o: 'ᴏ', p: 'ᴘ', q: 'ǫ', r: 'ʀ', s: 'ꜱ', t: 'ᴛ',
+      u: 'ᴜ', v: 'ᴠ', w: 'ᴡ', x: 'x', y: 'ʏ', z: 'ᴢ',
+      0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴', 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'
+    }
+  },
+
+  '𝑈𝑛𝑖𝑐𝑜𝑑𝑒': {
+    name: '𝑈𝑛𝑖𝑐𝑜𝑑𝑒',
+    map: Object.fromEntries(
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.split('').map((char, i) => {
+        const italicSerif = '𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁' +
+                            '𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛' +
+                            '0123456789';
+        return [char, italicSerif[i] || char];
+      })
+    )
+  },
+
+  '𝘜𝘯𝘪𝘤𝘰𝘥𝘦': {
+    name: '𝘜𝘯𝘪𝘤𝘰𝘥𝘦',
+    map: Object.fromEntries(
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.split('').map((char, i) => {
+        const italicSans = '𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡' +
+                           '𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻' +
+                           '0123456789';
+        return [char, italicSans[i] || char];
+      })
+    )
+  }
+},
+'𝗨𝗻𝗶𝗰𝗼𝗱𝗲': {
+  name: '𝗨𝗻𝗶𝗰𝗼𝗱𝗲',
+  map: {
+    A: '𝗔', B: '𝗕', C: '𝗖', D: '𝗗', E: '𝗘', F: '𝗙', G: '𝗚', H: '𝗛', I: '𝗜', J: '𝗝',
+    K: '𝗞', L: '𝗟', M: '𝗠', N: '𝗡', O: '𝗢', P: '𝗣', Q: '𝗤', R: '𝗥', S: '𝗦', T: '𝗧',
+    U: '𝗨', V: '𝗩', W: '𝗪', X: '𝗫', Y: '𝗬', Z: '𝗭',
+    a: '𝗮', b: '𝗯', c: '𝗰', d: '𝗱', e: '𝗲', f: '𝗳', g: '𝗴', h: '𝗵', i: '𝗶', j: '𝗷',
+    k: '𝗸', l: '𝗹', m: '𝗺', n: '𝗻', o: '𝗼', p: '𝗽', q: '𝗾', r: '𝗿', s: '𝘀', t: '𝘁',
+    u: '𝘂', v: '𝘃', w: '𝘄', x: '𝘅', y: '𝘆', z: '𝘇',
+    0: '𝟬', 1: '𝟭', 2: '𝟮', 3: '𝟯', 4: '𝟰', 5: '𝟱', 6: '𝟲', 7: '𝟳', 8: '𝟴', 9: '𝟵'
+  }
+},
+'𝘿𝙊𝙏': {
+  name: '𝘿𝙊𝙏',
+  map: {
+    A: '𝘼', B: '𝘽', C: '𝘾', D: '𝘿', E: '𝙀', F: '𝙁', G: '𝙂', H: '𝙃', I: '𝙄', J: '𝙅',
+    K: '𝙆', L: '𝙇', M: '𝙈', N: '𝙉', O: '𝙊', P: '𝙋', Q: '𝙌', R: '𝙍', S: '𝙎', T: '𝙏',
+    U: '𝙐', V: '𝙑', W: '𝙒', X: '𝙓', Y: '𝙔', Z: '𝙕',
+    a: '𝙖', b: '𝙗', c: '𝙘', d: '𝙙', e: '𝙚', f: '𝙛', g: '𝙜', h: '𝙝', i: '𝙞', j: '𝙟',
+    k: '𝙠', l: '𝙡', m: '𝙢', n: '𝙣', o: '𝙤', p: '𝙥', q: '𝙦', r: '𝙧', s: '𝙨', t: '𝙩',
+    u: '𝙪', v: '𝙫', w: '𝙬', x: '𝙭', y: '𝙮', z: '𝙯',
+    0: '𝟶', 1: '𝟷', 2: '𝟸', 3: '𝟹', 4: '𝟺', 5: '𝟻', 6: '𝟼', 7: '𝟽', 8: '𝟾', 9: '𝟿'
+  }
+},
+'🅂🅀🅄🄰🅁🄴🄳': {
+  name: '🄰🅂🄲🄸🄸',
+  map: {
+    A: '🄰', B: '🄱', C: '🄲', D: '🄳', E: '🄴', F: '🄵', G: '🄶', H: '🄷', I: '🄸', J: '🄹',
+    K: '🄺', L: '🄻', M: '🄼', N: '🄽', O: '🄾', P: '🄿', Q: '🅀', R: '🅁', S: '🅂', T: '🅃',
+    U: '🅄', V: '🅅', W: '🅆', X: '🅇', Y: '🅈', Z: '🅉',
+    0: '⓿', 1: '➊', 2: '➋', 3: '➌', 4: '➍', 5: '➎', 6: '➏', 7: '➐', 8: '➑', 9: '➒',
+    a: '🄰', b: '🄱', c: '🄲', d: '🄳', e: '🄴', f: '🄵', g: '🄶', h: '🄷', i: '🄸', j: '🄹',
+    k: '🄺', l: '🄻', m: '🄼', n: '🄽', o: '🄾', p: '🄿', q: '🅀', r: '🅁', s: '🅂', t: '🅃',
+    u: '🅄', v: '🅅', w: '🅆', x: '🅇', y: '🅈', z: '🅉'
+  }
+},
+'𝔈𝔪𝔬𝔧𝔦': {
+  name: '🧿𝔈𝔪𝔬𝔧𝔦',
+  map: {
+    A: '𝔄', B: '𝔅', C: 'ℭ', D: '𝔇', E: '𝔈', F: '𝔉', G: '𝔊', H: 'ℌ', I: 'ℑ', J: '𝔍',
+    K: '𝔎', L: '𝔏', M: '𝔐', N: '𝔑', O: '𝔒', P: '𝔓', Q: '𝔔', R: 'ℜ', S: '𝔖', T: '𝔗',
+    U: '𝔘', V: '𝔙', W: '𝔚', X: '𝔛', Y: '𝔜', Z: 'ℨ',
+    a: '𝔞', b: '𝔟', c: '𝔠', d: '𝔡', e: '𝔢', f: '𝔣', g: '𝔤', h: '𝔥', i: '𝔦', j: '𝔧',
+    k: '𝔨', l: '𝔩', m: '𝔪', n: '𝔫', o: '𝔬', p: '𝔭', q: '𝔮', r: '𝔯', s: '𝔰', t: '𝔱',
+    u: '𝔲', v: '𝔳', w: '𝔴', x: '𝔵', y: '𝔶', z: '𝔷',
+    0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9'
+  }
+},
+'𝓑𝓸𝓽𝓽𝓮𝓭': {
+  name: '𝓑𝓸𝓽𝓽𝓮𝓭',
+  map: {
+    A: '𝓐', B: '𝓑', C: '𝓒', D: '𝓓', E: '𝓔', F: '𝓕', G: '𝓖', H: '𝓗', I: '𝓘', J: '𝓙',
+    K: '𝓚', L: '𝓛', M: '𝓜', N: '𝓝', O: '𝓞', P: '𝓟', Q: '𝓠', R: '𝓡', S: '𝓢', T: '𝓣',
+    U: '𝓤', V: '𝓥', W: '𝓦', X: '𝓧', Y: '𝓨', Z: '𝓩',
+    a: '𝓪', b: '𝓫', c: '𝓬', d: '𝓭', e: '𝓮', f: '𝓯', g: '𝓰', h: '𝓱', i: '𝓲', j: '𝓳',
+    k: '𝓴', l: '𝓵', m: '𝓶', n: '𝓷', o: '𝓸', p: '𝓹', q: '𝓺', r: '𝓻', s: '𝓼', t: '𝓽',
+    u: '𝓾', v: '𝓿', w: '𝔀', x: '𝔁', y: '𝔂', z: '𝔃',
+    0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9'
+  }
+},
+'『𝕲𝕺𝕿𝕳𝕀ℂ』': {
+  name: '『𝕲𝕺𝕿𝕳𝕀ℂ』',
+  map: {
+    A: '𝔄', B: '𝔅', C: 'ℭ', D: '𝔇', E: '𝔈', F: '𝔉', G: '𝔊', H: 'ℌ', I: 'ℑ', J: '𝔍',
+    K: '𝔎', L: '𝔏', M: '𝔐', N: '𝔑', O: '𝔒', P: '𝔓', Q: '𝔔', R: 'ℜ', S: '𝔖', T: '𝔗',
+    U: '𝔘', V: '𝔙', W: '𝔚', X: '𝔛', Y: '𝔜', Z: 'ℨ',
+    a: '𝔞', b: '𝔟', c: '𝔠', d: '𝔡', e: '𝔢', f: '𝔣', g: '𝔤', h: '𝔥', i: '𝔦', j: '𝔧',
+    k: '𝔨', l: '𝔩', m: '𝔪', n: '𝔫', o: '𝔬', p: '𝔭', q: '𝔮', r: '𝔯', s: '𝔰', t: '𝔱',
+    u: '𝔲', v: '𝔳', w: '𝔴', x: '𝔵', y: '𝔶', z: '𝔷',
+    0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9'
+  }
+},
+'[̲̅U]': {
+  name: '[̲̅U]',
+  map: (() => {
+    const base = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const map = {};
+    for (let ch of base) {
+      map[ch] = ch + '\u0332\u0305'; // underline + overline
+    }
+    return map;
+  })()
+},
+'𝒞𝓊𝓇𝓈𝒾𝓋𝑒': {
+  name: '𝒞𝓊𝓇𝓈𝒾𝓋𝑒',
+  map: {
+    A: '𝒜', B: 'ℬ', C: '𝒞', D: '𝒟', E: 'ℰ', F: 'ℱ', G: '𝒢',
+    H: 'ℋ', I: 'ℐ', J: '𝒥', K: '𝒦', L: 'ℒ', M: 'ℳ', N: '𝒩',
+    O: '𝒪', P: '𝒫', Q: '𝒬', R: 'ℛ', S: '𝒮', T: '𝒯', U: '𝒰',
+    V: '𝒱', W: '𝒲', X: '𝒳', Y: '𝒴', Z: '𝒵',
+    a: '𝒶', b: '𝒷', c: '𝒸', d: '𝒹', e: 'ℯ', f: '𝒻', g: 'ℊ',
+    h: '𝒽', i: '𝒾', j: '𝒿', k: '𝓀', l: '𝓁', m: '𝓂', n: '𝓃',
+    o: 'ℴ', p: '𝓅', q: '𝓆', r: '𝓇', s: '𝓈', t: '𝓉', u: '𝓊',
+    v: '𝓋', w: '𝓌', x: '𝓍', y: '𝓎', z: '𝓏',
+    0: '0', 1: '1', 2: '2', 3: '3', 4: '4',
+    5: '5', 6: '6', 7: '7', 8: '8', 9: '9'
+  }
+},
+'𝓒𝓱𝓪𝓵𝓴𝓫𝓸𝓪𝓻𝓭': {
+  name: '𝓒𝓱𝓪𝓵𝓴𝓫𝓸𝓪𝓻𝓭',
+  map: {
+    A: '𝓐', B: '𝓑', C: '𝓒', D: '𝓓', E: '𝓔', F: '𝓕', G: '𝓖',
+    H: '𝓗', I: '𝓘', J: '𝓙', K: '𝓚', L: '𝓛', M: '𝓜', N: '𝓝',
+    O: '𝓞', P: '𝓟', Q: '𝓠', R: '𝓡', S: '𝓢', T: '𝓣', U: '𝓤',
+    V: '𝓥', W: '𝓦', X: '𝓧', Y: '𝓨', Z: '𝓩',
+    a: '𝓪', b: '𝓫', c: '𝓬', d: '𝓭', e: '𝓮', f: '𝓯', g: '𝓰',
+    h: '𝓱', i: '𝓲', j: '𝓳', k: '𝓴', l: '𝓵', m: '𝓶', n: '𝓷',
+    o: '𝓸', p: '𝓹', q: '𝓺', r: '𝓻', s: '𝓼', t: '𝓽', u: '𝓾',
+    v: '𝓿', w: '𝔀', x: '𝔁', y: '𝔂', z: '𝔃',
+    0: '0', 1: '1', 2: '2', 3: '3', 4: '4',
+    5: '5', 6: '6', 7: '7', 8: '8', 9: '9'
+  }
+},
+'U͎n͎i͎c͎o͎d͎e͎': {
+  name: 'U͎n͎i͎c͎o͎d͎e͎',
+  map: (() => {
+    const underline = '\u0332'; // Combining low line
+    const map = {};
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    for (let ch of chars) {
+      map[ch] = ch + underline;
+    }
+    return map;
+  })()
+}
+
+};
+
+    function toggleDropdown() {
+    const dropdown = document.getElementById("styleList");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+  }
+
+  function setStyle(styleKey) {
+    currentStyle = styleKey;
+    document.getElementById("selectedStyle").textContent = styles[styleKey].name;
+    document.getElementById("styleList").style.display = "none";
+  }
+
+  document.addEventListener("click", function (e) {
+    const list = document.getElementById("styleList");
+    if (!e.target.closest("#styleList") && !e.target.closest("button")) {
+      list.style.display = "none";
+    }
+  });
+
+  function convertText() {
+    const input = document.getElementById("inputText").value;
+    let output = "";
+
+    if (currentStyle === 'emoji') {
+      for (let char of input) {
+        const lower = char.toLowerCase();
+        output += styles.emoji.map[lower] || char;
+      }
+    } else if (currentStyle === 'cursive') {
+      for (let char of input) {
+        if (/[a-z]/.test(char)) {
+          output += String.fromCodePoint(styles.cursive.base.a + (char.charCodeAt(0) - 97));
+        } else if (/[A-Z]/.test(char)) {
+          output += String.fromCodePoint(styles.cursive.base.A + (char.charCodeAt(0) - 65));
+        } else {
+          output += char;
+        }
+      }
+    }
+
+    document.getElementById("outputText").value = output;
+  }
+
+  function copyText() {
+    const text = document.getElementById("outputText");
+    text.select();
+    document.execCommand("copy");
+  }
+
+  function downloadText() {
+    const text = document.getElementById("outputText").value;
+    const blob = new Blob([text], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "converted-text.txt";
+    link.click();
+  }
+
+  // Close dropdown on outside click
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('dropdown');
+    if (!dropdown.contains(e.target) && e.target.innerText !== "Select Style ▼") {
+      dropdown.style.display = 'none';
+    }
+  });
+</script>
+
+
+<footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Features</a></li>
+          <li><a href="all-tools.html">Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="mobileapp.html">Mobile App</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="extentions.html">Extensions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 MyToolza – All rights reserved
+    </div>
+  </footer>
+<script src="tools.js"></script>
+ <script>
+  const toolsList = window.TOOL_LIST;
+
+  const headerSearchInput = document.getElementById('headerSearch');
+  const headerSearchResults = document.getElementById('searchResults');
+  const mobileSearchInput = document.getElementById('mobileSearchInput');
+  const mobileSearchResults = document.getElementById('mobileSearchResults');
+
+  function showSearchResults(inputValue, container) {
+    const query = inputValue.trim().toLowerCase();
+    container.innerHTML = '';
+
+    if (query.length < 1) return;
+
+    const results = toolsList.filter(tool => tool.name.toLowerCase().includes(query));
+
+    if (results.length === 0) {
+      const noResult = document.createElement('div');
+      noResult.textContent = 'No tools found';
+      noResult.style.padding = '10px';
+      container.appendChild(noResult);
+      return;
+    }
+
+    results.forEach(tool => {
+      const link = document.createElement('a');
+      link.href = tool.url;
+      link.textContent = tool.name;
+      link.style.display = 'block';
+      link.style.padding = '10px';
+      link.style.textDecoration = 'none';
+      link.style.color = '#000';
+      link.style.borderBottom = '1px solid #eee';
+      link.onmouseover = () => link.style.background = '#f0f0f0';
+      link.onmouseout = () => link.style.background = 'transparent';
+      container.appendChild(link);
+    });
+  }
+
+  headerSearchInput.addEventListener('input', () => {
+    showSearchResults(headerSearchInput.value, headerSearchResults);
+  });
+
+  mobileSearchInput.addEventListener('input', () => {
+    showSearchResults(mobileSearchInput.value, mobileSearchResults);
+  });
+
+  // Hide results when clicking outside
+  document.addEventListener('click', (e) => {
+  // Header search hide
+  if (!headerSearchInput.contains(e.target) && !headerSearchResults.contains(e.target)) {
+    headerSearchResults.innerHTML = '';
+  }
+
+  // Mobile search results hide
+  if (!mobileSearchInput.contains(e.target) && !mobileSearchResults.contains(e.target)) {
+    mobileSearchResults.innerHTML = '';
+  }
+
+  // Floating menu hide on outside click — ONLY on mobile
+  const menu = document.getElementById('menu');
+  const menuIcon = document.querySelector('.menu-icon');
+
+  if (window.innerWidth <= 768) {
+    if (
+      !menu.contains(e.target) &&
+      !menuIcon.contains(e.target)
+    ) {
+      menu.style.display = 'none';
+    }
+  }
+});
+
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function showMobileSearch() {
+    document.getElementById('mobileSearchBox').style.display = 'block';
+    document.getElementById('menu').style.display = 'none';
+  }
+ // Any new code
+
+</script>
+<script src="tool-script.js"></script>
+
+
+</body>
+</html>

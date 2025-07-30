@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /adminhamad/
+
+Sitemap: https://mytoolza.com/sitemap.xml

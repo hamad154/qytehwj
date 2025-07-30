@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="Free online tools for PDF, images, text, and more – all in one place with MyToolza.">
+<meta name="keywords" content="PDF tools, image converter, zip extractor, QR generator, free online tools">
+<meta name="robots" content="index, follow">
+<meta name="author" content="MyToolza">
+
+  <meta charset="UTF-8" />
+  <title>Tool Categories | MyToolza</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    :root {
+      --red: #e63946;
+      --light-bg: #f3f3f3;
+      --text-dark: #111;
+      --white: #fff;
+      --footer-bg: #1e1e1e;
+      --footer-link: #ccc;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:sans-serif; }
+    body { background: var(--light-bg); color: var(--text-dark); }
+
+       header {
+  background: var(--white);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.site-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--red);
+  flex-shrink: 0;
+}
+.site-name a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.main-nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-search {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  width: 200px;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--red);
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-group {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-nav,
+  .header-search {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+    @media (max-width: 768px) {
+      .header-left {
+        display: none;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu-icon {
+        display: none;
+      }
+    }
+
+    main {
+      padding: 90px 20px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    main h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: var(--red);
+    }
+   .tools {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.tool-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.2s;
+  width: 240px;
+  text-decoration: none;
+  display: block;
+}
+
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.tool-card h3 {
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.tool-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: var(--red);
+  text-align: center;
+}
+
+    .floating-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      width: 280px;
+      background: var(--white);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      z-index: 9999;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .floating-menu input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .floating-menu ul {
+      list-style: none;
+    }
+
+    .floating-menu ul li {
+      margin: 10px 0;
+    }
+
+    .floating-menu ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+.floating-menu ul li a:hover {
+  color: var(--red);
+}
+
+
+    .mobile-search {
+  display: none;
+  background: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 60px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  z-index: 998;
+  border-radius: 6px;
+}
+.mobile-search input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-link);
+    }
+    .footer-columns {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+      padding: 50px 20px;
+    }
+    .footer-columns h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .footer-columns ul {
+      list-style: none;
+    }
+    .footer-columns ul li {
+      margin: 8px 0;
+    }
+    .footer-columns ul li a {
+      color: var(--footer-link);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin: 0;
+      font-size: 0.85rem;
+      border-top: 1px solid #444;
+      padding: 20px 0 10px;
+    }
+.category-title {
+  background: #fcd1d1;
+  color: #000;
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 40px auto 20px;
+  text-align: center;
+}
+
+  </style>
+<!-- Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-560YBXFEEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-560YBXFEEN');
+</script>
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="your_verification_code" />
+
+</head>
+<body>
+
+   <header>
+  <div class="site-name">
+  <a href="index.html">MyToolza</a>
+</div>
+
+  <div class="nav-group">
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="all-tools.html">All Tools</a>
+    </nav>
+<input id="headerSearch" class="header-search" type="text" placeholder="Search tools..." oninput="filterCategoryTools()" />
+
+  </div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+
+
+  <div id="mobileSearchBox" class="mobile-search">
+    <input id="mobileSearchInput" type="text" placeholder="Type to search..." oninput="filterToolsMobile()" />
+  </div>
+
+  <div class="floating-menu" id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="all-tools.html">All Tools</a></li>
+      <li><a href="#" onclick="showMobileSearch()">Search</a></li>
+    </ul>
+  </div>
+
+
+  </header>
+
+  <main>
+  <h1 style="font-size: 2rem; color: var(--red); margin-bottom: 10px; text-align: center;">Categories</h1>
+
+  <div class="category-title">Text & Documents</div>
+  <div class="tools">
+    <a href="tools/text-case-converter.html" class="tool-card">
+      <h3>Text Case Converter</h3><p>Convert text to UPPERCASE, lowercase, or Capitalized.</p>
+    </a>
+    <a href="tools/csv-to-json.html" class="tool-card">
+      <h3>CSV to JSON</h3><p>Convert spreadsheet data to structured JSON.</p>
+    </a>
+<a href="space-remover.html" class="tool-card">
+      <h3>Remove Extra Spaces</h3><p>Remove extra spaces from text and adjust the text.</p>
+    </a>
+
+  </div>
+
+  <div class="category-title">Images</div>
+  <div class="tools">
+    <a href="tools/image-compressor.html" class="tool-card">
+      <h3>Image Compressor</h3><p>Reduce image file size using your browser.</p>
+    </a>
+  </div>
+
+  <div class="category-title">Converters</div>
+  <div class="tools">
+    <a href="tools/csv-to-json.html" class="tool-card">
+      <h3>CSV to JSON</h3><p>Convert spreadsheet data to structured JSON.</p>
+    </a>
+  </div>
+
+  <div class="category-title">Privacy & Security</div>
+  <div class="tools">
+    <a href="tools/password-generator.html" class="tool-card">
+      <h3>Password Generator</h3><p>Create strong, secure passwords instantly.</p>
+    </a>
+  </div>
+
+  <div class="category-title">Utilities</div>
+  <div class="tools">
+    <a href="tools/qr-code-generator.html" class="tool-card">
+      <h3>QR Code Generator</h3><p>Make QR codes from URLs, text, or data.</p>
+    </a>
+  </div>
+
+  <div class="category-title">File Tools</div>
+  <div class="tools">
+    <a href="tools/zip-extractor.html" class="tool-card">
+      <h3>ZIP Extractor</h3><p>Extract .zip files inside your browser.</p>
+    </a>
+  </div>
+</main>
+
+
+ <footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Features</a></li>
+          <li><a href="all-tools.html">Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="mobileapp.html">Mobile App</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="extentions.html">Extensions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 MyToolza – All rights reserved
+    </div>
+  </footer>
+ <script>
+const menu = document.getElementById('menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const mobileSearch = document.getElementById('mobileSearchBox');
+
+    function toggleMenu() {
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function showMobileSearch() {
+      mobileSearch.style.display = 'block';
+      menu.style.display = 'none';
+    }
+
+    document.addEventListener('click', function (e) {
+  const isInsideMenu = menu.contains(e.target) || menuIcon.contains(e.target);
+  const isInsideSearch =
+    mobileSearch.contains(e.target) ||
+    e.target.id === 'mobileSearchInput' ||
+    e.target.textContent.includes('Search') ||
+    e.target.closest('#mobileSearchInput');
+
+  if (!isInsideMenu) menu.style.display = 'none';
+  if (!isInsideSearch) mobileSearch.style.display = 'none';
+});
+
+function filterCategoryTools() {
+  const input = document.getElementById('headerSearch').value.toLowerCase();
+  const allToolsSections = document.querySelectorAll('.tools');
+
+  allToolsSections.forEach(section => {
+    const cards = section.querySelectorAll('.tool-card');
+    const titleBox = section.previousElementSibling; // .category-title
+    let hasVisible = false;
+
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const show = title.includes(input);
+      card.style.display = show ? 'inline-block' : 'none';
+      if (show) hasVisible = true;
+    });
+
+    section.style.display = hasVisible ? 'flex' : 'none';
+    if (titleBox && titleBox.classList.contains('category-title')) {
+      titleBox.style.display = hasVisible ? 'inline-block' : 'none';
+    }
+  });
+}
+function filterToolsMobile() {
+  const input = document.getElementById('mobileSearchInput').value.toLowerCase();
+  const allToolsSections = document.querySelectorAll('.tools');
+
+  allToolsSections.forEach(section => {
+    const cards = section.querySelectorAll('.tool-card');
+    const titleBox = section.previousElementSibling; // .category-title
+    let hasVisible = false;
+
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const match = title.includes(input);
+      card.style.display = match ? 'inline-block' : 'none';
+      if (match) hasVisible = true;
+    });
+
+    section.style.display = hasVisible ? 'flex' : 'none';
+    if (titleBox && titleBox.classList.contains('category-title')) {
+      titleBox.style.display = hasVisible ? 'inline-block' : 'none';
+    }
+  });
+}
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 768) {
+    mobileSearch.style.display = 'none';
+  }
+});
+</script>
+<script src="tool-script.js"></script>
+
+</body>
+</html>

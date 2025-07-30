@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="description" content="Free online tools for PDF, images, text, and more – all in one place with MyToolza.">
+<meta name="keywords" content="PDF tools, image converter, zip extractor, QR generator, free online tools">
+<meta name="robots" content="index, follow">
+<meta name="author" content="MyToolza">
+
+  <meta charset="UTF-8">
+  <title>MyToolza | Online PDF Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="icon" type="image/png" sizes="92x92" href="favicon-92.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+
+  <style>
+    :root {
+      --red: #e63946;
+      --light-bg: #f3f3f3;
+      --text-dark: #111;
+      --white: #fff;
+      --footer-bg: #1e1e1e;
+      --footer-link: #ccc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+    body { background: var(--light-bg); color: var(--text-dark); }
+
+   header {
+  background: var(--white);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.site-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--red);
+  flex-shrink: 0;
+}
+.site-name a {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.main-nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-search {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  width: 200px;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.menu-icon {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--red);
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-group {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .main-nav,
+  .header-search {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+
+
+    @media (max-width: 768px) {
+      .header-left {
+        display: none;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu-icon {
+        display: none;
+      }
+    }
+
+       .tools {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+    .tool-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.2s;
+      width: 240px;
+}
+
+    .floating-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      width: 280px;
+      background: var(--white);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      z-index: 9999;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .floating-menu input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .floating-menu ul {
+      list-style: none;
+    }
+
+    .floating-menu ul li {
+      margin: 10px 0;
+    }
+
+    .floating-menu ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+.floating-menu ul li a:hover {
+  color: var(--red);
+}
+
+
+    .mobile-search {
+  display: none;
+  background: #fff;
+  padding: 12px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 60px;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  z-index: 998;
+  border-radius: 6px;
+}
+.mobile-search input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+
+    footer {
+      background: var(--footer-bg);
+      color: var(--footer-link);
+      padding: 50px 20px;
+    }
+
+    .footer-columns {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-columns h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .footer-columns ul {
+      list-style: none;
+    }
+
+    .footer-columns ul li {
+      margin: 8px 0;
+    }
+
+    .footer-columns ul li a {
+      color: var(--footer-link);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.85rem;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+footer {
+  padding-bottom: 10px;
+}
+
+#searchResults {
+  position: absolute;
+  top: 45px;
+  left: 1060px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+#searchResults a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+#searchResults a:hover {
+  background-color: #f0f0f0;
+}
+
+ // Any new design
+
+  </style>
+
+<!-- Google Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-560YBXFEEN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-560YBXFEEN');
+</script>
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="your_verification_code" />
+</head>
+<body>
+
+
+  <header>
+  <div class="site-name">
+  <a href="index.html">MyToolza</a>
+</div>
+  <div class="nav-group">
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="all-tools.html">All Tools</a>
+    </nav>
+<div class="header-search-wrapper">
+  <input id="headerSearch" class="header-search" type="text" placeholder="Search tools..." oninput="searchTools(this.value)" />
+  <div id="searchResults"></div>
+</div>
+</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <div class="floating-menu" id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="all-tools.html">All Tools</a></li>
+      <li>
+  <input
+    id="mobileSearchInput"
+    type="text"
+    placeholder="Type to search..."
+    oninput="filterToolsMobile()"
+    style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px;"
+  />
+  <div id="mobileSearchResults"></div>
+</li>
+    </ul>
+  </div>
+</header>
+
+<section style="max-width: 900px; margin: 120px auto 60px auto; padding: 20px; background: var(--white); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <h1 style="color: var(--red); font-size: 2rem; text-align: center; margin-bottom: 20px;">Mobile App – Coming Soon</h1>
+
+  <p style="line-height: 1.7; margin-bottom: 15px; text-align: center;">
+    We’re building a fast, lightweight MyToolza mobile app so you can use your favorite tools on the go — anytime, anywhere.
+  </p>
+
+  <p style="line-height: 1.7; margin-bottom: 15px; text-align: center;">
+    Our app will support both Android and iOS platforms and offer offline access to selected tools.
+  </p>
+
+  <p style="line-height: 1.7; text-align: center;">
+    Stay tuned! For early access or partnership queries, please 
+    <a href="contact.html" style="color: var(--red); text-decoration: none; font-weight: bold;">contact us</a>.
+  </p>
+
+  <p style="text-align: center; margin-top: 40px; font-size: 0.95rem; color: #555;">
+    Expected Launch: Late 2026
+  </p>
+</section>
+
+
+<footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Features</a></li>
+          <li><a href="all-tools.html">Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="mobileapp.html">Mobile App</a></li>
+          <li><a href="api.html">API</a></li>
+          <li><a href="extentions.html">Extensions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 MyToolza – All rights reserved
+    </div>
+  </footer>
+<script src="tools.js"></script>
+ <script>
+  const toolsList = window.TOOL_LIST;
+
+  const headerSearchInput = document.getElementById('headerSearch');
+  const headerSearchResults = document.getElementById('searchResults');
+  const mobileSearchInput = document.getElementById('mobileSearchInput');
+  const mobileSearchResults = document.getElementById('mobileSearchResults');
+
+  function showSearchResults(inputValue, container) {
+    const query = inputValue.trim().toLowerCase();
+    container.innerHTML = '';
+
+    if (query.length < 1) return;
+
+    const results = toolsList.filter(tool => tool.name.toLowerCase().includes(query));
+
+    if (results.length === 0) {
+      const noResult = document.createElement('div');
+      noResult.textContent = 'No tools found';
+      noResult.style.padding = '10px';
+      container.appendChild(noResult);
+      return;
+    }
+
+    results.forEach(tool => {
+      const link = document.createElement('a');
+      link.href = tool.url;
+      link.textContent = tool.name;
+      link.style.display = 'block';
+      link.style.padding = '10px';
+      link.style.textDecoration = 'none';
+      link.style.color = '#000';
+      link.style.borderBottom = '1px solid #eee';
+      link.onmouseover = () => link.style.background = '#f0f0f0';
+      link.onmouseout = () => link.style.background = 'transparent';
+      container.appendChild(link);
+    });
+  }
+
+  headerSearchInput.addEventListener('input', () => {
+    showSearchResults(headerSearchInput.value, headerSearchResults);
+  });
+
+  mobileSearchInput.addEventListener('input', () => {
+    showSearchResults(mobileSearchInput.value, mobileSearchResults);
+  });
+
+  // Hide results when clicking outside
+  document.addEventListener('click', (e) => {
+  // Header search hide
+  if (!headerSearchInput.contains(e.target) && !headerSearchResults.contains(e.target)) {
+    headerSearchResults.innerHTML = '';
+  }
+
+  // Mobile search results hide
+  if (!mobileSearchInput.contains(e.target) && !mobileSearchResults.contains(e.target)) {
+    mobileSearchResults.innerHTML = '';
+  }
+
+  // Floating menu hide on outside click — ONLY on mobile
+  const menu = document.getElementById('menu');
+  const menuIcon = document.querySelector('.menu-icon');
+
+  if (window.innerWidth <= 768) {
+    if (
+      !menu.contains(e.target) &&
+      !menuIcon.contains(e.target)
+    ) {
+      menu.style.display = 'none';
+    }
+  }
+});
+
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  function showMobileSearch() {
+    document.getElementById('mobileSearchBox').style.display = 'block';
+    document.getElementById('menu').style.display = 'none';
+  }
+ // Any new code
+
+</script>
+
+
+</body>
+</html>
